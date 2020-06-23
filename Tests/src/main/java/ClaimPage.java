@@ -2,17 +2,18 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
 import java.util.ArrayList;
 
 public class ClaimPage implements SwitchBetweenBrowsersWindows, ScrollToElement {
-    WebDriver driver;
+    private final RemoteWebDriver driver;
 
     private  final By claimButton = By.xpath("//*[@id=\"main\"]/header/div[2]/ul/li[1]/a/span[1]");
 
     private final By createNewClaimButton = By.xpath("//*[@id=\"main\"]/header/div[2]/ul/li[1]/div/div/div[1]/ul/li[3]/a/span");
 
-    public ClaimPage(WebDriver driver) {
+    public ClaimPage(RemoteWebDriver driver) {
         this.driver = driver;
     }
 

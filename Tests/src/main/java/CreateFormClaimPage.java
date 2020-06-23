@@ -2,11 +2,12 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
 import java.util.ArrayList;
 
 public class CreateFormClaimPage implements SwitchBetweenBrowsersWindows, ScrollToElement {
-    private final WebDriver driver;
+    private final RemoteWebDriver driver;
     private final By subdivisionListButton = By.xpath("//*[@id=\"executor\"]" +
             "/div/div/div[1]/div/div[2]/div/span/button/span[1]"); // Кнопка выбора подразделения из списка
     private final By valueOfSubdivisionList = By.xpath("//*[@id=\"pr_id_14_list\"]/li[2]"); // Значение из списка подразделение
@@ -25,7 +26,7 @@ public class CreateFormClaimPage implements SwitchBetweenBrowsersWindows, Scroll
     private final By saveButton = By.xpath("//*[@id=\"main\"]/main/div/div[2]/div[2]/div[2]/div/button[2]");
 
 
-    public CreateFormClaimPage(WebDriver driver) {
+    public CreateFormClaimPage(RemoteWebDriver driver) {
         this.driver = driver;
     }
 

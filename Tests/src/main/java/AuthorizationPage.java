@@ -1,10 +1,11 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
 public class AuthorizationPage {
     private final String login = "avte";
     private final String password = "1234";
-    private final WebDriver driver;
+    private  final RemoteWebDriver driver;
     private  final String authWebUrl = "http://172.20.255.251:8080/authWeb/";
     private final By loginField = By.cssSelector("#app > div.layout > div > div > div > div > " +
             "div > div > div > form > div:nth-child(1) > div > div > div > input");
@@ -13,7 +14,7 @@ public class AuthorizationPage {
     private final By submitButton = By.cssSelector("#app > div.layout > div > div > div > " +
             "div > div > div > div > form > div.py12.align-center > button > span");
 
-    public AuthorizationPage(WebDriver driver) {
+    public AuthorizationPage(RemoteWebDriver driver) {
         this.driver = driver;
     }
 

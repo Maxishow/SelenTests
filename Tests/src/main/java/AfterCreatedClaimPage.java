@@ -1,9 +1,10 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
 public class AfterCreatedClaimPage {
-    private final WebDriver driver;
-    public AfterCreatedClaimPage(WebDriver driver) {
+    private final RemoteWebDriver driver;
+    public AfterCreatedClaimPage(RemoteWebDriver driver) {
         this.driver = driver;
     }
 

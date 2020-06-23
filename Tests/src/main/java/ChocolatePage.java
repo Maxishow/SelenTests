@@ -2,15 +2,16 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
 import java.util.ArrayList;
 
 public class ChocolatePage implements SwitchBetweenBrowsersWindows, ScrollToElement {
-    private final WebDriver driver;
+    private final RemoteWebDriver driver;
     private final By stringEnterInSubSystemsText = By.xpath("//*[@id=\"container\"]/main/h2");
     private final By iconOfClaimModule = By.xpath("//*[@id=\"container\"]/main/div[1]/div[2]/div/h3");
 
-    public ChocolatePage(WebDriver driver) {
+    public ChocolatePage(RemoteWebDriver driver) {
         this.driver = driver;
     }
 
